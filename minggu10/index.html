@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Hello World Javascript</title> 
+</head> 
+<body> 
+    <h1>berikut conoth javascript</h1>
+    <script> 
+        console.log("Umpatan terkirim"); 
+        document.write("kon!"); 
+        
+    </script> 
+
+    <a href="#" onclick="alert('You shouldnt have done that...')">Click me!</a> 
+
+    <h1>Tutorial Javascript untuk Pemula</h1> 
+    <div id="hasil-output"></div> 
+
+    <script> 
+        // membuat objek elemen 
+        var hasil = document.getElementById("hasil-output"); 
+
+        // menampilkan output ke elemen hasil 
+        hasil.innerHTML = "<p>Aku suka Javascript</p>"; 
+
+        window.alert("Selamat datang di halaman percobaan minggu 10");
+    </script>
+
+    <button onClick="alert('Tombol diklik!')">Klik Saya</button> 
+
+    <script>
+        function hitung()
+        {
+            var watashinoForm = document.itungHitungan;
+            var a = eval(watashinoForm.bil1.value);
+            var b = eval(watashinoForm.bil2.value);
+            var oper = watashinoForm.opr.value;
+
+            if (oper=="+")
+            {
+                var c = a+b;
+            }
+            else if (oper=="-")
+            {
+                var c = a-b;
+            }
+            else if (oper=="*")
+            {
+                var c = a*b;
+            }
+            else if (oper=="/")
+            {
+                var c = a/b;
+            }
+
+            watashinoForm.hasil.value = c;
+        }
+    </script>
+
+    <form name="itungHitungan" action="#">
+        bil1 <input type="number" name="bil1"><br>
+        opr
+        <select name="opr">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br>
+        bil2 <input type="number" name="bil2"><br>
+        <input type="button" value="=" onclick="hitung()">
+        <input type="number" name="hasil" disabled>
+    </form>
+
+
+    <script> 
+        var yakin = confirm("Apakah kamu yakin akan mengunjungi website UDINUS?"); 
+     
+        if (yakin) { 
+            window.location = "http://dinus.ac.id "; 
+        }
+        else { 
+            document.write("belum, tetap di sini saja :)"); 
+        } 
+    </script>
+</body> 
+</html>
